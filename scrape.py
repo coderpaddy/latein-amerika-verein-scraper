@@ -8,7 +8,7 @@ with open(f'all-members.csv', 'w', newline='') as csv_file:
     fieldnames = ["name", "address", "web", "email", "tel",]
     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
     writer.writeheader()
-    for i in range(20):
+    for i in range(1, 29):
         session = HTMLSession()
         url = f"{base_url}{i}/"
         webpage = session.get(url)
